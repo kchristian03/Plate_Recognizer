@@ -1,0 +1,28 @@
+
+train: plate-number-2.v2i.yolov8/train/
+val: plate-number-2.v2i.yolov8/valid/
+test: plate-number-2.v2i.yolov8/test/
+nc: 36
+names: ['0', '1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '33', '34', '35', '4', '5', '6', '7', '8', '9']
+
+augmentations:
+  mosaic: true
+  mixup: true
+  hsv_h: 0.05  # Higher hue variation
+  hsv_s: 0.75  # Higher saturation variation
+  hsv_v: 0.4   # Moderate value variation
+  degrees: 20
+  translate: 0.1
+  scale: 0.5
+  shear: 15
+  perspective: 0.0
+  flipud: 0.5
+  fliplr: 0.5
+
+
+roboflow:
+  workspace: ssabrut
+  project: plate-number-2
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ssabrut/plate-number-2/dataset/2
